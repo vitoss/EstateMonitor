@@ -1,0 +1,7 @@
+Estate Monitor
+
+Goals:
+- add arbitrary number of sites with ads
+- every site might have different site layout (has it's own parser)
+- we visit particular links on every site and search for keywords
+- after successful match we mail links to configured mailbox
