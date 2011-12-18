@@ -18,7 +18,7 @@ sites = [ { "address": gumtreeAdress, "linkSelector" : ".resultsTableSB .hgk a" 
 		  
 rawkeywords = [ u"stoigniewa", u"heltmana", u"pańska", u"wola duchacka", 
 				u"bonark", u"plaszów", u"kurdwan", u"siemomysła", u"gipsowa", 
-				u"dworcow", u"wielick", ]
+				u"dworcow", u"wielick",  u"piaski nowe"]
 				
 encodeWithUtf = lambda key : key.encode('utf8')
 keywords = map(encodeWithUtf, rawkeywords)
