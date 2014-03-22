@@ -16,14 +16,12 @@ sites = [ { "address": gumtreeAdress, "linkSelector" : ".resultsTableSB .hgk a" 
 		  { "address": szybkoAddress, "linkSelector" : ".listUNIT .div2 a.nagl" } 
 		  ]
 		  
-rawkeywords = [ u"stoigniewa", u"heltmana", u"pańska", u"wola duchacka", 
-				u"bonark", u"plaszów", u"kurdwan", u"siemomysła", u"gipsowa", 
-				u"dworcow", u"wielick",  u"piaski nowe"]
+rawkeywords = [ u"keyword"]
 				
 encodeWithUtf = lambda key : key.encode('utf8')
 keywords = map(encodeWithUtf, rawkeywords)
 
-receivers = ["vitotao@gmail.com", "kicia.panterka@gmail.com"]
+receivers = ["me@goo.com"]
 
 dbFilename = "readedAds.dat"
 db = shelve.open(dbFilename)
@@ -48,7 +46,7 @@ for site in sites:
 #sending email
 if len(matchedSites) > 0:
 	for receiver in receivers:
-		sendEmail( "wwdaemon@gmail.com", receiver, "Raport mieszkaniowy", 
+		sendEmail( "some_output_email@goo.com", receiver, "Raport mieszkaniowy", 
 				u"Odpowiedzi na slowa kluczowe:" + u", ".join(rawkeywords) + u"\r\n\r\n" + 
 				u"\r\n".join(matchedSites) )
 				
